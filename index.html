@@ -1,4 +1,3 @@
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -9,467 +8,966 @@
     <link rel="icon" href="/docs/4.0/assets/img/favicons/favicon.ico">
 
     <title>Cover Template for Bootstrap</title>
-   <style>
-#scroll-animate
-{
-  overflow: hidden;
-}
 
-#scroll-animate-main
-{
-  width: 100%;
-  left: 0;
-  position: fixed;
-}
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Saira">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta.2/css/bootstrap.css">
+<link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css">
 
-#heightPage,
-#heightScroll
-{
-  width: 10px;
-  top: 0;
-  position: absolute;
-  z-index: 99;
-}
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+     <link href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-#heightPage
-{
-  left: 0;
-}
+   </head>
+   <body>
 
-#heightScroll
-{
-  right: 0;
-}
-
-header
-{
-  width: 100%;
-  height: 100%;
-  background: url(https://raw.githubusercontent.com/hudsonmarinho/header-and-footer-parallax-effect/master/assets/images/bg-header.jpg) no-repeat 50% 50%;
-  top: 0;
-  position: fixed;
-  z-index: -1;
-}
-
-footer
-{
-  width: 100%;
-  height: 300px;
-  background: gray;
-  bottom: -300px;
-  position: fixed;
-  z-index: -1;
-}
-
-.content
-{
-  height: 1000px;
-  min-height: 1000px;
-  background: #ededed;
-  position: relative;
-  z-index: 1;
-}
-
-.wrapper-parallax {
-  margin-top: 100%;
-  margin-bottom: 300px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
-}
-
-h1{
-  width: 100%;
-  height: 100%;
-  padding: 0;
-  margin: 0;
-  text-transform: uppercase;
-  text-align: center;
-  font-family: Helvetica;
-  font-size: 150px;
-  color: #fff;
-}
-
-header h1{}
-
-.content h1{
-  line-height: 1000px;
-  color: #999;
-}
-
-footer h1
-{
-  line-height: 300px;
-}
-
-header,
-footer,
-#scroll-animate-main
-{
-  -webkit-transition-property: all;
-     -moz-transition-property: all;
-      transition-property: all;
-
-  -webkit-transition-duration: 0.4s;
-     -moz-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-
-  -webkit-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-     -moz-transition-timing-function: cubic-bezier(0, 0, 0, 1);
-      transition-timing-function: cubic-bezier(0, 0, 0, 1);
-}
-
-
-[type="checkbox"]:checked,
-[type="checkbox"]:not(:checked){
-  position: absolute;
-  left: -9999px;
-}
-.menu-icon:checked + label,
-.menu-icon:not(:checked) + label{
-  position: fixed;
-  top: 63px;
-  right: 75px;
-  display: block;
-  width: 30px;
-  height: 30px;
-  padding: 0;
-  margin: 0;
-  cursor: pointer;
-  z-index: 10;
-}
-.menu-icon:checked + label:before,
-.menu-icon:not(:checked) + label:before{
-  position: absolute;
-  content: '';
-  display: block;
-  width: 30px;
-  height: 20px;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  border-top: 2px solid #ececee;
-  border-bottom: 2px solid #ececee;
-  transition: border-width 100ms 1500ms ease, 
-              top 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1),
-              height 100ms 1600ms cubic-bezier(0.23, 1, 0.32, 1), 
-              background-color 200ms ease,
-              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-.menu-icon:checked + label:after,
-.menu-icon:not(:checked) + label:after{
-  position: absolute;
-  content: '';
-  display: block;
-  width: 22px;
-  height: 2px;
-  z-index: 20;
-  top: 10px;
-  right: 4px;
-  background-color: #ececee;
-  margin-top: -1px;
-  transition: width 100ms 1750ms ease, 
-              right 100ms 1750ms ease,
-              margin-top 100ms ease, 
-              transform 200ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-.menu-icon:checked + label:before{
-  top: 10px;
-  transform: rotate(45deg);
-  height: 2px;
-  background-color: #ececee;
-  border-width: 0;
-  transition: border-width 100ms 340ms ease, 
-              top 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1),
-              height 100ms 300ms cubic-bezier(0.23, 1, 0.32, 1), 
-              background-color 200ms 500ms ease,
-              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-.menu-icon:checked + label:after{
-  width: 30px;
-  margin-top: 0;
-  right: 0;
-  transform: rotate(-45deg);
-  transition: width 100ms ease,
-              right 100ms ease,  
-              margin-top 100ms 500ms ease, 
-              transform 200ms 1700ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.nav{
-  position: fixed;
-  top: 33px;
-  right: 50px;
-  display: block;
-  width: 80px;
-  height: 80px;
-  padding: 0;
-  margin: 0;
-  z-index: 9;
-  overflow: hidden;
-  box-shadow: 0 8px 30px 0 rgba(0,0,0,0.3);
-  background-color: #353746;
-  animation: border-transform 7s linear infinite;
-  transition: top 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),  
-              right 350ms 1100ms cubic-bezier(0.23, 1, 0.32, 1),
-              transform 250ms 1100ms ease,
-              width 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1),
-              height 650ms 400ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-@keyframes border-transform{
-    0%,100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; } 
-  14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; } 
-  28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; } 
-  42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; } 
-  56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; } 
-  70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; } 
-  84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; } 
-}
-
-.menu-icon:checked ~ .nav {
-  animation-play-state: paused;
-  top: 50%;
-  right: 50%;
-  transform: translate(50%, -50%);
-  width: 200%;
-  height: 200%;
-  transition: top 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),  
-              right 350ms 700ms cubic-bezier(0.23, 1, 0.32, 1),
-              transform 250ms 700ms ease,
-              width 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1),
-              height 750ms 1000ms cubic-bezier(0.23, 1, 0.32, 1);
-}
-
-.nav ul{
-  position: absolute;
-  top: 50%;
-  left: 0;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 0;
-  z-index: 6;
-  text-align: center;
-  transform: translateY(-50%);
-  list-style: none;
-}
-.nav ul li{
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin: 10px 0;
-  text-align: center;
-  list-style: none;
-  pointer-events: none;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(30px);
-  transition: all 250ms linear;
-}
-.nav ul li:nth-child(1){
-  transition-delay: 200ms;
-}
-.nav ul li:nth-child(2){
-  transition-delay: 150ms;
-}
-.nav ul li:nth-child(3){
-  transition-delay: 100ms;
-}
-.nav ul li:nth-child(4){
-  transition-delay: 50ms;
-}
-.nav ul li a{
-  font-family: 'Montserrat', sans-serif;
-  font-size: 9vh;
-  text-transform: uppercase;
-  line-height: 1.2;
-  font-weight: 800;
-  display: inline-block;
-  position: relative;
-  color: #ececee;
-  transition: all 250ms linear;
-}
-.nav ul li a:hover{
-  text-decoration: none;
-  color: #ffeba7;
-}
-.nav ul li a:after{
-  display: block;
-  position: absolute;
-  top: 50%;
-  content: '';
-  height: 2vh;
-  margin-top: -1vh;
-  width: 0;
-  left: 0;
-  background-color: #353746;
-  opacity: 0.8;
-  transition: width 250ms linear;
-}
-.nav ul li a:hover:after{
-  width: 100%;
-}
-
-
-.menu-icon:checked ~ .nav  ul li {
-  pointer-events: auto;
-  visibility: visible;
-  opacity: 1;
-  transform: translateY(0);
-  transition: opacity 350ms ease,
-              transform 250ms ease;
-}
-.menu-icon:checked ~ .nav ul li:nth-child(1){
-  transition-delay: 1400ms;
-}
-.menu-icon:checked ~ .nav ul li:nth-child(2){
-  transition-delay: 1480ms;
-}
-.menu-icon:checked ~ .nav ul li:nth-child(3){
-  transition-delay: 1560ms;
-}
-.menu-icon:checked ~ .nav ul li:nth-child(4){
-  transition-delay: 1640ms;
-}
-
-
-
-.logo {
-  position: absolute;
-  top: 60px;
-  left: 50px;
-  display: block;
-  z-index: 11;
-  transition: all 250ms linear;
-}
-.logo img {
-  height: 26px;
-  width: auto;
-  display: block;
-}
-
-
-
-@media screen and (max-width: 991px) {
-  .menu-icon:checked + label,
-  .menu-icon:not(:checked) + label{
-    right: 55px;
-  }
-  .logo {
-    left: 30px;
-  }
-  .nav{
-    right: 30px;
-  }
-  h1{
-    font-size: 9vw;
-    -webkit-text-stroke: 2px transparent;
-    text-stroke: 2px transparent;
-    -webkit-text-fill-color: #ffeba7;
-    text-fill-color: #ffeba7;
-    color: #ffeba7;
-  }
-  .nav ul li a{
-    font-size: 8vh;
-  }
-}
-
-   </style>
-  </head>
-
-  <body class="text-center">
-<div id="scroll-animate">
-  <div id="scroll-animate-main">
-    <div class="wrapper-parallax">
-      <header>
-          <a href="https://front.codes/" class="logo" target="_blank">
-    <img src="https://assets.codepen.io/1462889/fcy.png" alt="">
+  <a href="https://front.codes/" class="logo" target="_blank" style="text-decoration: none">
+	  	<h1 style="font-size: 40px; -webkit-text-fill-color: #C9E265;">D.W.</h1>
+    <!--img src="images/D.W..png" alt=""-->
   </a>
-
+  
     <input class="menu-icon" type="checkbox" id="menu-icon" name="menu-icon"/>
     <label for="menu-icon"></label>
-    <nav class="nav">     
+    <nav class="nav" style="cursor: pointer; overflow: hidden">     
       <ul class="pt-5">
-        <li><a href="#">Work</a></li>
-        <li><a href="#">Studio</a></li>
-        <li><a href="#">News</a></li>
-        <li><a href="#">Contact</a></li>
+        <!--li><a href="#trabajo">¿Cómo trabajamos?</a></li-->
+        <li><a href="#about">Nosotros</a></li>
+        <li><a href="#service">Nuestros servicios</a></li>
+        <li><a href="#skills">Nuestras herramientas</a></li>
+        <li><a href="#team">Nuestro equipo</a></li>
+        <li><a href="#content">Contacto</a></li>
+
       </ul>
     </nav>
+	<div class="shadow-title parallax-top-shadow" style="z-index: -1">DelyWEBS</div>
+  <div class="section-parallax parallax-00" style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-0.png');"></div>
+  <div class="section-parallax parallax-01" style="background-image: url('http://www.ivang-design.com/svg-load/parallax/parallax-01.png');"></div>
 
-    <div class="section-center">
-      <h1 class="mb-0">Pure CSS Menu</h1>
-    </div>
-      </header>
+<div class="section full-height">
+  <div class="section-title-wrap">
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center parallax-fade-top">
 
-      <section class="content">
-        <h1>Content</h1>
-      </section>
-
-      <footer>
-        <h1>Footer</h1>
-      </footer>
+          <p>Microsites + landing page</p>	
+          <h1>DelyWebs</h1>
+        </div>
+      </div>	
     </div>
   </div>
 </div>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-<script type="text/javascript">
-  function scrollFooter(scrollY, heightFooter)
-{
-    console.log(scrollY);
-    console.log(heightFooter);
-
-    if(scrollY >= heightFooter)
-    {
-        $('footer').css({
-            'bottom' : '0px'
-        });
-    }
-    else
-    {
-        $('footer').css({
-            'bottom' : '-' + heightFooter + 'px'
-        });
-    }
-}
-
-$(window).load(function(){
-    var windowHeight        = $(window).height(),
-        footerHeight        = $('footer').height(),
-        heightDocument      = (windowHeight) + ($('.content').height()) + ($('footer').height()) - 20;
-
-    // Definindo o tamanho do elemento pra animar
-    $('#scroll-animate, #scroll-animate-main').css({
-        'height' :  heightDocument + 'px'
-    });
-
-    // Definindo o tamanho dos elementos header e conteúdo
-    $('header').css({
-        'height' : windowHeight + 'px',
-        'line-height' : windowHeight + 'px'
-    });
-
-    $('.wrapper-parallax').css({
-        'margin-top' : windowHeight + 'px'
-    });
-
-    scrollFooter(window.scrollY, footerHeight);
-
-    // ao dar rolagem
-    window.onscroll = function(){
-        var scroll = window.scrollY;
-
-        $('#scroll-animate-main').css({
-            'top' : '-' + scroll + 'px'
-        });
+<!--div id="trabajo" class="section full-height z-bigger" style="padding:100px 0px 100px">
+	<div class="container-fluid text-center" style="margin-bottom: 100px">    
+  <div class="row">
+    <div class="col-sm-2">
+      
+    </div>
+    <div class="col-sm-8 text-left"> 
+      <div class="project-link-wrap">
+            <h2 style="  
+    color: #c7e064; font-size: 55px">¿Cómo trabajamos?</h2>
+          </div>
+     
         
-        $('header').css({
-            'background-position-y' : 50 - (scroll * 100 / heightDocument) + '%'
-        });
+    </div>
+    <div class="col-sm-2">
+     
+    </div>
+  </div>
+</div>
 
-        scrollFooter(scroll, footerHeight);
-    }
-});
-</script>
-   
-  </body>
+	<div class="container team-section">
+		
+	
+ <div class="row" style="margin-bottom: 200px "> 
+    <div class="col-md-3 animated bounceIn">
+			<div class="team-box">
+				<div class="img-box">
+					<img src="images/mobile-friendly.png" alt="mobile friendly">					
+					<div class="team-hover-box">
+						
+						<p>Websites responsivos, teniendo en cuenta compatibilidad con mobile.</p>
+					</div>
+				</div>
+				<h3>Mobile friendly</h3>
+				
+			</div>
+		</div>
+    <div class="col-md-3 animated bounceIn">
+			<div class="team-box">
+				<div class="img-box">
+					<img src="images/simple.png" alt="">					
+					<div class="team-hover-box">
+						<p>Estética que acompañe al producto y estimule visualmente al potencial cliente.</p>
+					</div>
+				</div>
+				<h3>Estetico</h3>
+				
+			</div>
+		</div>
+    <div class="col-md-3 animated bounceIn">
+			<div class="team-box">
+				<div class="img-box">
+					<img src="images/target.png" alt="">					
+					<div class="team-hover-box">
+						<p>A quien está dirigido el sitio, el usuario final.</p>
+					</div>
+				</div>
+				<h3>Target</h3>				
+			</div>
+		</div>
+    <div class="col-md-3 animated bounceIn">
+			<div class="team-box">
+				<div class="img-box">
+					<img src="images/user.png" alt="">					
+					<div class="team-hover-box">
+						<p>Facilmente navegable, que cualquier persona pueda acceder y entender el mensaje.</p>
+					</div>
+				</div>
+				<h3>Simplicidad</h3>
+				
+			</div>
+		</div>
+  </div>
+
+</div>
+</div-->
+	<!--section _ngcontent-ycb-c41="" class="py-10 bg-white"><div _ngcontent-ycb-c53="" class="container"><div _ngcontent-ycb-c53="" class="row text-center"><div _ngcontent-ycb-c53="" class="col-lg-4 mb-5 mb-lg-0"><div _ngcontent-ycb-c53="" class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4"><i-feather _ngcontent-ycb-c53="" name="droplet" _nghost-ycb-c37=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-droplet">
+    <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"></path>
+</svg></i-feather></div><h2 _ngcontent-ycb-c53="">Design</h2><p _ngcontent-ycb-c53="" class="mb-0">We start by creating a set of brand guidelines and standards</p></div><div _ngcontent-ycb-c53="" class="col-lg-4 mb-5 mb-lg-0"><div _ngcontent-ycb-c53="" class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4"><i-feather _ngcontent-ycb-c53="" name="code" _nghost-ycb-c37=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-code">
+    <polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline>
+</svg></i-feather></div><h2 _ngcontent-ycb-c53="">Develop</h2><p _ngcontent-ycb-c53="" class="mb-0">Our award winning development team creates personalized digital experiences</p></div><div _ngcontent-ycb-c53="" class="col-lg-4"><div _ngcontent-ycb-c53="" class="icon-stack icon-stack-xl bg-gradient-primary-to-secondary text-white mb-4"><i-feather _ngcontent-ycb-c53="" name="truck" _nghost-ycb-c37=""><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="feather feather-truck">
+    <rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle>
+</svg></i-feather></div><h2 _ngcontent-ycb-c53="">Deliver</h2><p _ngcontent-ycb-c53="" class="mb-0">Our products are created on time, and to your exact specifications</p></div></div></div><sbpro-border _ngcontent-ycb-c41="" _nghost-ycb-c39=""><div _ngcontent-ycb-c39="" class="svg-border-rounded text-light"><svg _ngcontent-ycb-c39="" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144.54 17.34" preserveAspectRatio="none" fill="currentColor"><path _ngcontent-ycb-c39="" d="M144.54,17.34H0V0H144.54ZM0,0S32.36,17.34,72.27,17.34,144.54,0,144.54,0"></path></svg></div></sbpro-border></section-->
+  <!--ul class="case-study-wrapper">
+    <li class="case-study-name">                            	
+      <a href="#" class="hover-target">light</a>
+    </li>
+    <li class="case-study-name">                                         	
+      <a href="#" class="hover-target">flare</a>
+    </li>
+    <li class="case-study-name">                                        	
+      <a href="#" class="hover-target">nature</a>
+    </li>
+    <li class="case-study-name">                                         	
+      <a href="#" class="hover-target">fire</a>
+    </li>
+  </ul>
+  <ul class="case-study-images">
+    <li>
+      <div class="img-hero-background">
+        <img src="http://www.ivang-design.com/svg-load/parallax/light.jpg" alt="">
+      </div>  
+      <div class="hero-number-back">01</div> 
+      <div class="hero-number">01</div> 
+      <div class="hero-number-fixed">04</div> 
+      <div class="case-study-title">graphic design, interaction</div> 
+    </li>
+    <li>
+      <div class="img-hero-background">
+        <img src="http://www.ivang-design.com/svg-load/parallax/flare.jpg" alt="">
+      </div> 
+      <div class="hero-number-back">02</div> 
+      <div class="hero-number">02</div>  
+      <div class="case-study-title">advertising, art direction</div> 
+    </li>
+    <li>
+      <div class="img-hero-background">
+        <img src="http://www.ivang-design.com/svg-load/parallax/nature.jpg" alt="">
+      </div>
+      <div class="hero-number-back">03</div>  
+      <div class="hero-number">03</div> 
+      <div class="case-study-title">photography, retouching</div> 
+    </li>
+    <li>
+      <div class="img-hero-background">
+        <img src="http://www.ivang-design.com/svg-load/parallax/fire.jpg" alt="">
+      </div> 
+      <div class="hero-number-back">04</div> 
+      <div class="hero-number">04</div> 
+      <div class="case-study-title">photography, advertising</div> 
+    </li>
+  </ul-->	
+
+    <!-- Start Section About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="text-center wow fadeIn animated" data-wow-duration="5s" data-wow-offset="60">Nosotros</h2>
+            <div class="bor"></div>
+            <div class="row text-center">
+                <div class="col-lg wow fadeIn animated mb-5 mb-lg-0" data-wow-duration="5s" data-wow-offset="120">
+                    <div class="icon-box">
+                        <i class="fa fa-lightbulb-o fa-4x fa-fw " aria-hidden="true"></i>
+                    </div>
+
+                    <div class="about-info  mt-4">
+                        <h3>Somos crativos</h3>
+                        <p>
+                            Inventar texto aca porque no me sale contenido
+                        </p>
+                    </div>
+                    <!-- End About Info -->
+                </div>
+                <!-- End Box One -->
+
+                <div class="col-lg wow fadeIn animated mb-5 mb-lg-0" data-wow-duration="5s" data-wow-offset="120">
+                    <div class="icon-box">
+                        <i class="fa fa-users fa-4x fa-fw " aria-hidden="true"></i>
+                    </div>
+                    <div class="about-info mt-4">
+                        <h3>Somos profesionales</h3>
+                        <p>
+                            Inventar texto aca porque no me sale contenido
+                        </p>
+                    </div>
+                    <!-- End About Info -->
+                </div>
+                <!-- End Box Two -->
+
+                <div class="col-lg wow fadeIn animated" data-wow-duration="5s" data-wow-offset="120">
+                    <div class="icon-box">
+                        <i class="fa fa-flash fa-4x fa-fw " aria-hidden="true"></i>
+                    </div>
+                    <div class="about-info  mt-4">
+                        <h3>We're Creative</h3>
+                        <p>
+                            Inventar texto aca porque no me sale contenido
+                        </p>
+                    </div>
+                    <!-- End About Info -->
+                </div>
+                <!-- End Box Three -->
+            </div>
+            <!-- End Row -->
+        </div>
+        <!-- End Class Container -->
+    </section>
+    <!-- End Section About -->
+
+    <!--Start Section Video-->
+    <!--section class="video">
+        <div class="container">
+            <div id="myVideo" class="carousel slide" data-ride="carousel">
+                
+                <ol class="carousel-indicators">
+                    <li data-target="#myVideo" class="active" data-slide-to="0"></li>
+                    <li data-target="#myVideo" data-slide-to="1"></li>
+                    <li data-target="#myVideo" data-slide-to="2"></li>
+                </ol>
+
+                
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="row">
+                            <div class="col-lg-5 mb-5 mb-lg-0">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EqifJ2jr1wg?ecver=1" allowfullscreen></iframe>
+                                </div>
+                            </div> 
+
+                            <div class="col-lg-7">
+                                <h4>Principales características de DelyWebs</h4>
+                                <p>
+                                    Somos un equipo de profesionales donde nuestro principal proposito es satisfacer las necesidades de nuestros clientes para que puedan cumplir sus objetivos de manera digital, agil y eficaz.
+                                </p>
+                                <p>                                
+									Hay muchas variaciones de nuestros productos para cubrir todas la necesidades posibles.
+                                </p>
+                                
+                            </div> 
+                        </div> 
+                    </div> 
+
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="col-lg-5 mb-5 mb-lg-0">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe src="https://www.youtube.com/embed/DkweB7DCijI" allowfullscreen></iframe>
+                                </div>
+                            </div> 
+
+                            <div class="col-lg-7">
+                                <h4>Main Features of Meghna</h4>
+                                <p>
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </p>
+                                <p>
+                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
+                                </p>
+                                <a type="button" class="btn btn-success">Learn More </a>
+                                <a type="button" class="btn btn-success ml-1">Purchase Theme</a>
+                            </div> 
+                        </div> 
+                    </div> 
+
+                    <div class="carousel-item ">
+                        <div class="row">
+                            <div class="col-lg-5 mb-5 mb-lg-0 wow bounceInRight">
+                                <div class="embed-responsive embed-responsive-16by9">
+                                    <iframe src="https://www.youtube.com/embed/fHOzy5-hu-o" allowfullscreen></iframe>
+                                </div>
+                            </div> 
+
+                            <div class="col-lg-7">
+                                <h4>Main Features of Meghna</h4>
+                                <p>
+                                    It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                                </p>
+                                <p>
+                                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour
+                                </p>
+                                <a type="button" class="btn btn-success">Learn More </a>
+                                <a type="button" class="btn btn-success ml-1">Purchase Theme</a>
+                            </div> 
+                        </div> 
+                    </div> 
+
+                </div> 
+            </div> 
+        </div> 
+    </section-->
+    <!--End Section Video-->
+
+    <!-- Start Section Count To -->
+    <section class="count text-center">
+        <div class="overlay"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg col-md-6 wow fadeIn animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="75" >
+                    <div class="box mb-4 mb-lg-0">
+                        <span class="timer" data-from="30" data-to="1000" data-speed="12000">30</span>
+                        <i class="fa fa-users fa-fw fa-3x" aria-hidden="true"></i>
+                        <p>Clientes felices</p>
+                    </div>
+                </div> <!-- End Box One -->
+
+                <div class="col-lg col-md-6 wow fadeIn animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="75" data-wow-delay="1s">
+                    <div class="box mb-4 mb-lg-0">
+                        <span class="timer" data-from="15" data-to="1250" data-speed="12000">15</span>
+                        <i class="fa fa-check-square fa-3x fa-fw" aria-hidden="true"></i>
+                        <p>Poryectos completos</p>
+                    </div>
+                </div> <!-- End Box Two -->
+
+                <div class="col-lg col-md-6 wow fadeIn animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="75" data-wow-delay="2s">
+                    <div class="box mb-4 mb-lg-0">
+                        <span class="timer" data-from="5" data-to="1800" data-speed="12000">5</span>
+                        <i class="fa fa-thumbs-up fa-3x fa-fw" aria-hidden="true"></i>
+                        <p>Feedback positivo</p>
+                    </div>
+                </div> <!-- End Box Three -->
+
+                <!--div class="col-lg col-md-6 wow fadeIn animated mb-3 mb-lg-0" data-wow-duration="2s" data-wow-offset="75" data-wow-delay="3s">
+                    <div class="box mb-3 mb-lg-0">
+                        <span class="timer" data-from="10" data-to="2500" data-speed="12000">10</span>
+                        <i class="fa fa-coffee fa-3x fa-fw" aria-hidden="true"></i>
+                        <p>Happy Client</p>
+                    </div>
+                </div--> <!-- End Box Four -->
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+    </section>
+    <!-- Start Section Count To -->
+
+
+    <!--Start Section Services -->
+    <section id="service" class="service text-center">
+        <div class="container">
+            <h2 class="wow fadeIn animated" data-wow-duration="2s" data-wow-offset="60">Nuestos <span>Servicios</span></h2>
+            <div class="ser"></div>
+
+            <div class="row">
+                <div class="col-lg-4 col-sm-6 mb-5 wow slideInLeft animated" data-wow-duration="2s" data-wow-offset="70">
+                    <div class="box">
+                        <i class="fa fa-wordpress fa-4x fa-fw" aria-hidden="true"></i>
+                        <h4>HTML Templates</h4>
+                        <p>
+                            Inventar texto
+                        </p>
+                    </div> <!-- End Box One -->
+                </div> <!-- Column One -->
+
+                <div class="col-lg-4 col-sm-6 mb-5 wow bounceIn animated" data-wow-duration="2s" data-wow-offset="70">
+                    <div class="box">
+                        <i class="fa fa-television fa-4x fa-fw" aria-hidden="true"></i>
+                        <h4>Diseños responsivos</h4>
+                        <p>
+                            Inventar texto
+                        </p>
+                    </div>
+                </div> <!-- Column Two -->
+
+                <div class="col-lg-4 col-sm-6 mb-5 wow slideInRight animated" data-wow-duration="2s" data-wow-offset="70">
+                    <div class="box">
+                        <i class="fa fa-play fa-4x fa-fw" aria-hidden="true"></i>
+                        <h4>Medios de comunicación y anuncios </h4>
+                        <p>
+                            Inventar texto
+                        </p>
+                    </div>
+                </div> <!-- Column Three -->
+
+                <div class="col-lg-4 col-sm-6 mb-5 wow slideInLeft animated" data-duration="2s" data-wow-offset="85">
+                    <div class="box">
+                        <i class="fa fa-eye fa-4x fa-fw" aria-hidden="true"></i>
+                        <h4>Diseño gráfico</h4>
+                        <p>
+                            Inventar texto
+                        </p>
+                    </div>
+                </div> <!-- Column One -->
+
+                <div class="col-lg-4 col-sm-6 mb-5 wow bounceIn animated" data-wow-duration="2s" data-wow-offset="85">
+                    <div class="box">
+                        <i class="fa fa-android fa-4x fa-fw" aria-hidden="true"></i>
+                        <h4>Desarrollo de aplicaciones</h4>
+                        <p>
+                            Inventar texto
+                        </p>
+                    </div>
+                </div> <!-- Column Two -->
+
+                <div class="col-lg-4 col-sm-6  mb-5 wow slideInRight animated" data-wow-duration="2s" data-wow-offset="85">
+                    <div class="box">
+                        <i class="fa fa-link fa-4x fa-fw" aria-hidden="true"></i>
+                        <h4>Networking</h4>
+                        <p>
+                            Inventar texto
+                        </p>
+                    </div>
+                </div> <!-- Column Three -->
+            </div>
+        </div> <!-- End Container -->
+    </section>
+    <!--End Section Services-->
+
+    <!-- Start Section Portfolio -->
+    <!--section id="port" class="port text-center">
+        <h2 class="wow fadeIn animated" data-wow-duration="2s" data-wow-offset="60">Our <span>Work</span></h2>
+        <div class="ser"></div>
+
+        <div class="container ">
+            <ul class="row list-unstyled text-center mb-5">
+                <li class="col-md active filter" data-filter="all"> All </li>
+                <li class="col-md filter" data-filter=".mobile"> Mobile App </li>
+                <li class="col-md filter" data-filter=".web"> Web Design </li>
+                <li class="col-md filter" data-filter=".photo"> Photoshop </li>
+                <li class="col-md filter" data-filter=".other"> Illustrator </li>
+            </ul>
+        </div> 
+
+        <div id="shuffle" class="container">
+                <div class="port-box mt-5">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix web wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                                <div class="mask">
+                                    <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                    <h5>Mamoun Adil </h5>
+                                </div>
+                                <img src="https://image.ibb.co/kuAD3b/1.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix photo wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/i1kfib/2.jpg" class="d-block w-100 "  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix web wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/hWe6Ob/3.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix mobile wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/gzqrpG/4.jpg" class="d-block w-100 "  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix other wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/cWG9bw/5.jpg" class="d-block w-100 "  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix mobile wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/cd2hww/6.jpg" class="d-block w-100 "  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix photo wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/nftK9G/7.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix other wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/hfVMOb/8.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix web wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/hz1T3b/9.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix photo wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/ckzsUG/10.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix other wow faseIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/iTqAGw/11.jpg" class="d-block w-100"  />
+                        </div>
+
+                        <div class="col-lg-3 col-md-4 col-sm-6 img mix mobile wow fadeIn animated" data-wow-duration="2s" data-wow-offset="80">
+                            <div class="mask">
+                                <i class="fa fa-plus fa-2x fa-fw" aria-hidden="true"></i>
+                                <h5>Mamoun Adil </h5>
+                            </div>
+                            <img src="https://image.ibb.co/jXtmpG/12.jpg" class="d-block w-100"  />
+                        </div>
+
+                    </div> 
+                </div> 
+            </div>  
+    </section-->
+    <!-- End Section Portfolio -->
+
+    <!--Start Section Skills -->
+    <section id="skills" class="skills text-center">
+        <div class="overlay">
+        <div class="container">
+            <h2 class="wow bounceIn animated" data-wow-duration="2s" data-offset="60">Nuestras <span>herramientas</span></h2>
+            <div class="ser"></div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 wow slideInLeft animated mb-3 mb-lg-0" data-wow-duration="1s" data-wow-offset="90" >
+                    <div class="box">
+                        <div class="sk">
+                            <img src="https://image.ibb.co/kqY83b/s_85.png"  class="d-block mx-auto"/>
+                        </div>
+                        <h3 class="mt-3"><i class="fa fa-wordpress fa-lg fa-fw" aria-hidden="true"></i> Django</h3>
+                        <p>
+                            inventar texto
+                        </p>
+                    </div>
+                </div> <!-- End Col One -->
+
+                <div class="col-lg-3 col-sm-6 wow slideInUp animate mb-3 mb-lg-0" data-wow-duration="1s" data-wow-offset="90" >
+                    <div class="box text-center">
+                        <div class="sk">
+                            <img src="https://image.ibb.co/iwaz9G/s_90.png" class="d-block mx-auto" />
+                        </div>
+                        <h3 class="mt-3"><i class="fa fa-html5 fa-lg fa-fw" aria-hidden="true"></i> HTML5</h3>
+                        <p>
+                            inventar texto
+                        </p>
+                    </div>
+                </div> <!-- End Col Two -->
+
+                <div class="col-lg-3 col-sm-6 wow slideInDown animated mb-3 mb-lg-0" data-wow-duration="1s" data-wow-offset="90" >
+                    <div class="box text-center">
+                        <div class="sk">
+                            <img src="https://image.ibb.co/d03VGw/s_80.png"  class="d-block mx-auto"/>
+                        </div>
+                        <h3 class="mt-3"><i class="fa fa-android fa-lg fa-fw" aria-hidden="true"></i> Android</h3>
+                        <p>
+                            inventar texto
+                        </p>
+                    </div>
+                </div> <!-- End Col Three -->
+
+                <div class="col-lg-3 col-sm-6 wow slideInRight animated" data-wow-duration="1s" data-wow-offset="90">
+                    <div class="box text-center">
+                        <div class="sk">
+                            <img src="https://image.ibb.co/b3YmpG/s_70.png" class="d-block mx-auto" />
+                        </div>
+                        <h3 class="mt-3"><i class="fa fa-apple fa-lg fa-fw" aria-hidden="true"></i> IOS</h3>
+                        <p>
+                            inventar texto
+                        </p>
+                    </div>
+                </div> <!-- End Col Four -->
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        </div>
+    </section>
+    <!--End Section Skills -->
+
+    <!-- Start Section Team -->
+    <section id="team" class="team text-center">
+        <div class="container">
+            <h2 class="wow zoomIn animated"  data-wow-offset="60">Nuestro <span>Equipo</span></h2>
+            <div class="ser"></div>
+
+            <div class="row">
+                
+<div class="col-lg-1 col-sm-6 wow zoomInDown animated mb-6 mb-lg-0"  data-wow-offset="80">
+</div>
+                <div class="col-lg-5 col-sm-6 wow zoomInDown animated mb-6 mb-lg-0"  data-wow-offset="80">
+                    <div class="card mr-2" style="background: transparent;">
+                        <div class="position-relative">
+                            <div class="mask">
+                                <i class="fa fa-facebook fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-twitter fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-youtube fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-instagram fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-github fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                            </div>
+                            <img class="card-img-top d-block w-100" src="images/yo.jpg" alt="Member One" style="
+    width: 50%!important;
+    margin: auto;
+" />
+                        </div>
+                        <div class="card-header">
+                            <h5 class="card-title">Melina Macko</h5>
+                            <h6 class="card-subtitle">Frontend Developer</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Universidad Tecnológica Nacional. Actualmente trabaja en HSBC.
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- End Col Two -->
+
+                <div class="col-lg-5 col-sm-6 wow zoomInUp animated mb-6 mb-lg-0" data-wow-offset="80">
+                    <div class="card mr-2">
+                        <div class="position-relative">
+                            <div class="mask">
+                                <i class="fa fa-facebook fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-twitter fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-youtube fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-instagram fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                                <i class="fa fa-github fa-lg fa-fw d-inline-block" aria-hidden="true"></i>
+                            </div>
+                            <img class="card-img-top d-block w-100" src="" alt="Member One"  />
+                        </div>
+                        <div class="card-header">
+                            <h5 class="card-title">Matias Petrilli</h5>
+                            <h6 class="card-subtitle">BI</h6>
+                        </div>
+                        <div class="card-body">
+                            <p>
+                                Pasame tu contenido
+                            </p>
+                        </div>
+                    </div>
+                </div> <!-- End Col Three -->
+
+   <div class="col-lg-1 col-sm-6 wow zoomInDown animated mb-6 mb-lg-0"  data-wow-offset="80">
+</div>            
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+    </section>
+    <!-- End Section Team -->
+
+    <!--Start Section Follow-->
+    <section class="follow text-center ">
+        <div class="overlay">
+            <i class="fa fa-twitter fa-3x fa-fw d-block mx-auto wow bounceIn animated" data-wow-duration="2s" data-wow-offset="80" aria-hidden="true"></i>
+            <button type="button" class="btn btn-success wow swing animated" data-wow-duration="2s" data-wow-offset="80">Follow Us</button>
+        </div>
+    </section>
+    <!--End Section Follow-->
+
+    <!--Start Section Pricing -->
+    <section id="price" class="price text-center">
+        <div class="container">
+            <h2 class="wow fadeIn animated" data-wow-duration="2s" data-wow-offset="60">Our Greatest <span> Plans</span></h2>
+            <div class="ser"></div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 wow slideInLeft animated mb-4 mb-lg-0" data-wow-duration="1s" data-wow-offset="80">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Free</h4>
+                            <h5 class="card-subtitle">From <span>$99</span> Month</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-dark">1GB Disk Space</li>
+                                <li class="list-group-item list-group-item-light">10 Email Account</li>
+                                <li class="list-group-item list-group-item-dark">Script Installer</li>
+                                <li class="list-group-item list-group-item-light">1 GB Storage</li>
+                                <li class="list-group-item list-group-item-dark">10 GB Bandwidth</li>
+                                <li class="list-group-item list-group-item-light">24/7 Tech Support</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-success">SignUp</button>
+                        </div>
+                    </div> <!-- End Card -->
+                </div> <!-- End Col One -->
+
+                <div class="col-lg-3 col-sm-6 wow slideInDown mb-4 mb-lg-0" data-wow-duration="1s" data-wow-offset="80">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Silver</h4>
+                            <h5 class="card-subtitle">From <span>$149</span> Month</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-dark">1GB Disk Space</li>
+                                <li class="list-group-item list-group-item-light">10 Email Account</li>
+                                <li class="list-group-item list-group-item-dark">Script Installer</li>
+                                <li class="list-group-item list-group-item-light">1 GB Storage</li>
+                                <li class="list-group-item list-group-item-dark">10 GB Bandwidth</li>
+                                <li class="list-group-item list-group-item-light">24/7 Tech Support</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-success">SignUp</button>
+                        </div>
+                    </div> <!-- End Card -->
+                </div> <!-- End Col Two -->
+
+                <div class="col-lg-3 col-sm-6 wow slideInUp animated mb-4 mb-lg-0" data-wow-duration="1s" data-wow-offset="80">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Gold</h4>
+                            <h5 class="card-subtitle">From <span>$199</span> Month</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-dark">1GB Disk Space</li>
+                                <li class="list-group-item list-group-item-light">10 Email Account</li>
+                                <li class="list-group-item list-group-item-dark">Script Installer</li>
+                                <li class="list-group-item list-group-item-light">1 GB Storage</li>
+                                <li class="list-group-item list-group-item-dark">10 GB Bandwidth</li>
+                                <li class="list-group-item list-group-item-light">24/7 Tech Support</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-success">SignUp</button>
+                        </div>
+                    </div> <!-- End Card -->
+                </div> <!-- End Col Three -->
+
+                <div class="col-lg-3 col-sm-6 wow fadeInRight animated mb-4 mb-lg-0" data-wow-duration="1s" data-wow-offset="80">
+                    <div class="card">
+                        <div class="card-header">
+                            <h4 class="card-title">Platinum</h4>
+                            <h5 class="card-subtitle">From <span>$299</span> Month</h5>
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item list-group-item-dark">1GB Disk Space</li>
+                                <li class="list-group-item list-group-item-light">10 Email Account</li>
+                                <li class="list-group-item list-group-item-dark">Script Installer</li>
+                                <li class="list-group-item list-group-item-light">1 GB Storage</li>
+                                <li class="list-group-item list-group-item-dark">10 GB Bandwidth</li>
+                                <li class="list-group-item list-group-item-light">24/7 Tech Support</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <button type="button" class="btn btn-success">SignUp</button>
+                        </div>
+                    </div> <!-- End Card -->
+                </div> <!-- End Col Four -->
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+    </section>
+    <!--End Section Pricing -->
+
+    <!--Start Section Post -->
+    <!--section id="post" class="post ">
+        <div class="container">
+            <h2 class="text-center wow fadeIn animated" data-wow-duration="2s" data-wow-offset="60">Latest <span> Posts</span></h2>
+            <div class="ser"></div>
+
+            <div class="row">
+                <div class="col-lg-3 col-sm-6 wow bounceInLeft animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="80">
+                    <div class="card">
+                        <img  src="https://image.ibb.co/iUmjbw/post_01.jpg" class="card-img-top d-block w-100" alt="Post One"  />
+                        <div class="card-body">
+                            <h5 class="card-title">Simple Image Post</h5>
+                            <p>
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages release of Letraset
+                            </p>
+                            <button type="button" class="btn btn-success">Read More</button>
+                        </div>
+                    </div> 
+                </div> 
+
+                <div class="col-lg-3 col-sm-6 wow bounceInUp animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="80">
+                    <div class="card">
+                        <img  src="https://image.ibb.co/jXtmpG/12.jpg" class="card-img-top d-block w-100" alt="Post One"  />
+                        <div class="card-body">
+                            <h5 class="card-title">Simple Image Post</h5>
+                            <p>
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages release of Letraset
+                            </p>
+                            <button type="button" class="btn btn-success">Read More</button>
+                        </div>
+                    </div> 
+                </div> 
+
+                <div class="col-lg-3 col-sm-6 wow bounceInDown animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="80">
+                    <div class="card">
+                        <img  src="https://image.ibb.co/mBZFib/post_03.jpg" class="card-img-top d-block w-100" alt="Post One"  />
+                        <div class="card-body">
+                            <h5 class="card-title">Simple Image Post</h5>
+                            <p>
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages release of Letraset
+                            </p>
+                            <button type="button" class="btn btn-success">Read More</button>
+                        </div>
+                    </div> 
+                </div> 
+
+                <div class="col-lg-3 col-sm-6 wow bounceInRight animated mb-4 mb-lg-0" data-wow-duration="2s" data-wow-offset="80">
+                    <div class="card">
+                        <img  src="https://image.ibb.co/kqnqGw/post_04.jpg" class="card-img-top d-block w-100" alt="Post One"  />
+                        <div class="card-body">
+                            <h5 class="card-title">Simple Image Post</h5>
+                            <p>
+                                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages release of Letraset
+                            </p>
+                            <button type="button" class="btn btn-success">Read More</button>
+                        </div>
+                    </div> 
+                </div> 
+            </div>
+        </div> 
+    </section-->
+    <!--End Section Post -->
+
+    <!--Start Section Content -->
+    <section id="content" class="content">
+        <div class="container">
+            <h2 class="text-center wow fadeIn animated" data-wow-duration="2s" data-wow-offswt="60">Contactanos</h2>
+            <div class="ser"></div>
+
+            <div class="row">
+                <div class="col-lg col-md-12 wow slideInLeft animated mb-4 mb-lg-0" data-wow-duration="1s" data-wow-offset="80">
+                    <h5>Envianos un mensaje y cotizá tu proyecto!</h5>
+                    <p>
+                        No te quedes con las ganas de hacer rendir tu negocio y que todos te conozcan.
+                    </p>
+
+                    <div class="media mt-4 mb-3">
+                        <i class="fa fa-home fa-lg fa-fw mr-3 d-inline-block"></i>
+                        <div class="media-body">
+                            <span class="d-inline-block">Capital Federal, Buenos Aires, Argentina.</span>
+                        </div>
+                    </div>
+
+                    <div class="media mb-3">
+                        <i class="fa fa-phone fa-lg fa-fw mr-3 d-inline-block"></i>
+                        <div class="media-body">
+                            <span class="d-inline-block">Phone : 54-11-3133-5201</span>
+                        </div>
+                    </div>
+                    
+                    <div class="media mb-3">
+                        <i class="fa fa-envelope-o fa-lg fa-fw mr-3 d-inline-block"></i>
+                        <div class="media-body">
+                            <span class="d-inline-block">Email : delywebs@gmail.com</span>
+                        </div>
+                    </div>
+                </div> <!-- End Col -->
+
+                <div class="col-lg col-md-12 wow slideInRight animated" data-wow-duration="1s" data-wow-offset="80">
+                    <form>
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Nombre" />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Email"   />
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Asunto"  />
+                        </div>
+
+                        <textarea placeholder="Mensaje" rows="5" class="form-control"></textarea>
+
+                        <button type="button" class="btn btn-success d-block mt-3 w-100"><i class="fa fa-send fa-lg fa-fw mr-2"></i>ENVIAR</button>
+                    </form>
+                </div> <!-- End Col -->
+            </div> <!-- End Row -->
+        </div> <!-- End Container -->
+        
+    </section>
+    <!--End Section Content -->
+
+    <!--Start Section Map -->
+    <footer class="text-center" style="padding-top: 50px">
+        <span class="d-inline-block p-2"> CopyRight <sup>&copy;</sup> 2021 All Right Reversed </span>
+    </footer>
+    <!--End Section Map -->
+
+
+    <!--Go To Top -->
+    <div class="top">
+        <i class="fa fa-angle-double-up fa-2x fa-fw" aria-hidden="true"></i>
+    </div>
+    <!--Go To Top -->
+
+    <!--Start loading Page -->
+    <section class="loading">
+        <div class="sk-cube-grid">
+            <div class="sk-cube sk-cube1"></div>
+            <div class="sk-cube sk-cube2"></div>
+            <div class="sk-cube sk-cube3"></div>
+            <div class="sk-cube sk-cube4"></div>
+            <div class="sk-cube sk-cube5"></div>
+            <div class="sk-cube sk-cube6"></div>
+            <div class="sk-cube sk-cube7"></div>
+            <div class="sk-cube sk-cube8"></div>
+            <div class="sk-cube sk-cube9"></div>
+        </div>
+    </section>
+    <!--End loading Page -->
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"></script>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-countto/1.2.0/jquery.countTo.min.js"></script>
+
+<!--script src="https://cdnjs.cloudflare.com/ajax/libs/mixitup/3.2.2/mixitup.js"></script-->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+
+<script src="js/script.js"></script>
+   </body>
 </html>
